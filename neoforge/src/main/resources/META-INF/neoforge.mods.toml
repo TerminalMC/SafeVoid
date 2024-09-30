@@ -38,13 +38,7 @@ issueTrackerURL="${issues_url}" #optional:none
 [[dependencies."${mod_id}"]]
   modId="neoforge"
   versionRange="${neoforge_versions}"
-  side="CLIENT"
-
-[[dependencies."${mod_id}"]]
-  modId="cloth_config"
-  type="optional"
-  versionRange="${clothconfig_versions_neoforge}"
-  side="CLIENT"
+  side="SERVER"
 
 # https://docs.neoforged.net/docs/gettingstarted/modfiles/#modstoml
 # https://docs.neoforged.net/docs/misc/updatechecker/
