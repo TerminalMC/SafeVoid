@@ -20,7 +20,7 @@ public class MixinLivingEntity {
         if (options.enabled && (!options.playersOnly || entity instanceof Player)
                 && options.wrapMax && entity.getY() > options.maxHeight) {
             Vec3 delta = entity.getDeltaMovement();
-            entity.teleportTo(entity.getX(), options.minHeight, entity.getZ());
+            entity.teleportTo(entity.getX(), options.minHeight + 10, entity.getZ());
             entity.setDeltaMovement(delta);
             entity.hurtMarked = true;
         }
@@ -34,7 +34,7 @@ public class MixinLivingEntity {
         if (options.enabled && (!options.playersOnly || entity instanceof Player)) {
             if (options.wrapMin && entity.getY() < options.minHeight) {
                 Vec3 delta = entity.getDeltaMovement();
-                entity.teleportTo(entity.getX(), options.maxHeight, entity.getZ());
+                entity.teleportTo(entity.getX(), options.maxHeight - 10, entity.getZ());
                 entity.setDeltaMovement(delta);
                 entity.hurtMarked = true;
             }
