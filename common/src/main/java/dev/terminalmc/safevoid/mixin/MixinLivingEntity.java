@@ -11,6 +11,9 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(LivingEntity.class)
 public class MixinLivingEntity {
+    /**
+     * World-top wrap.
+     */
     @WrapMethod(method = "tick")
     private void onTick(Operation<Void> original) {
         // Don't complain unless you can demonstrate a fix for the
@@ -27,6 +30,9 @@ public class MixinLivingEntity {
         original.call();
     }
 
+    /**
+     * Damage-prevention and world-bottom wrap.
+     */
     @WrapMethod(method = "onBelowWorld")
     private void onVoidTick(Operation<Void> original) {
         Entity entity = ((Entity)(Object)this);
