@@ -28,6 +28,8 @@ In addition to blocking void damage, it wraps the world so if you go far enough 
 It's enabled in all dimensions, and by default only works for players. You can enable it for all `LivingEntity`s and
 configure the world wrap via the config file (no config UI, maybe later).
 
+Available commands are `/safevoid enable|disable|reload`
+
 <img src="https://raw.githubusercontent.com/TerminalMC/SafeVoid/HEAD/assets/images/end_01.png" style="width:100%;">
 
 ### License
