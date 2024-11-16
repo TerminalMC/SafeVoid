@@ -1,11 +1,24 @@
+/*
+ * Copyright 2024 TerminalMC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package dev.terminalmc.safevoid.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mojang.blaze3d.platform.InputConstants;
 import dev.terminalmc.safevoid.SafeVoid;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -15,7 +28,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
-import java.util.List;
 
 public class Config {
     private static final Path DIR_PATH = Path.of("config");
@@ -27,23 +39,23 @@ public class Config {
     public final Options options = new Options();
 
     public static class Options {
-        public static final boolean defaultEnabled = true;
-        public boolean enabled = defaultEnabled;
+        public static final boolean enabledDefault = true;
+        public boolean enabled = enabledDefault;
 
-        public static final boolean defaultPlayersOnly = true;
-        public boolean playersOnly = defaultPlayersOnly;
+        public static final boolean playersOnlyDefault = true;
+        public boolean playersOnly = playersOnlyDefault;
 
-        public static final int defaultMinHeight = -5000;
-        public int minHeight = defaultMinHeight;
+        public static final int minHeightDefault = -5000;
+        public int minHeight = minHeightDefault;
 
-        public static final boolean defaultWrapMin = true;
-        public boolean wrapMin = defaultWrapMin;
+        public static final boolean wrapMinDefault = true;
+        public boolean wrapMin = wrapMinDefault;
 
-        public static final int defaultMaxHeight = 5000;
-        public int maxHeight = defaultMaxHeight;
+        public static final int maxHeightDefault = 5000;
+        public int maxHeight = maxHeightDefault;
 
-        public static final boolean defaultWrapMax = true;
-        public boolean wrapMax = defaultWrapMax;
+        public static final boolean wrapMaxDefault = true;
+        public boolean wrapMax = wrapMaxDefault;
     }
 
     // Instance management

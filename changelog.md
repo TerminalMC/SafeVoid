@@ -1,1 +1,1 @@
-- Initial working version
+- Restrict command permission

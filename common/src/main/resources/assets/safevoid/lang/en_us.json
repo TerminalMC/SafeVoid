@@ -1,5 +1,5 @@
 {
   "safevoid.name": "SafeVoid",
-  "modmenu.descriptionTranslation.safevoid": "Prevents void damage and wraps the world vertically.",
-  "fml.menu.mods.info.description.safevoid": "Prevents void damage and wraps the world vertically."
+  "modmenu.descriptionTranslation.safevoid": "${mod_description}",
+  "fml.menu.mods.info.description.safevoid": "${mod_description}"
 }
