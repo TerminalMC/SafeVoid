@@ -39,12 +39,10 @@ on the client as well.
 
 <img src="https://raw.githubusercontent.com/TerminalMC/SafeVoid/HEAD/assets/images/end_01.png" style="width:100%;">
 
-### License
-
-[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)
-
 ### Contact
 
 [![Discord Server](https://img.shields.io/discord/1103153365216669797?logo=discord&label=Discord%20Server&color=%235865F2)](https://discord.terminalmc.dev)
 
 [![GitHub Issues](https://img.shields.io/github/issues/TerminalMC/SafeVoid?logo=github&label=GitHub%20Issues)](https://github.com/TerminalMC/SafeVoid/issues)
+
+[![License](https://img.shields.io/github/license/TerminalMC/SafeVoid?label=License&logo=github&logoColor=white)](https://github.com/TerminalMC/SafeVoid/blob/HEAD/LICENSE.txt)

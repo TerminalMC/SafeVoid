@@ -30,7 +30,7 @@ public class MixinEntity {
      */
     @WrapMethod(method = "onBelowWorld")
     private void onVoidTick(Operation<Void> original) {
-        if (((Entity)(Object)this) instanceof FireworkRocketEntity && Config.get().options.enabled) {
+        if (((Entity)(Object)this) instanceof FireworkRocketEntity && Config.options().enabled) {
             // pass
         } else {
             original.call();

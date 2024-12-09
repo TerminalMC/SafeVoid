@@ -35,10 +35,10 @@ public class Commands<S> extends CommandDispatcher<S> {
                 .then(literal("enable")
                         .executes(ctx -> {
                             MutableComponent msg = SafeVoid.PREFIX.copy();
-                            if (Config.get().options.enabled) {
+                            if (Config.options().enabled) {
                                 msg.append("Already enabled");
                             } else {
-                                Config.get().options.enabled = true;
+                                Config.options().enabled = true;
                                 Config.save();
                                 msg.append("Enabled");
                             }
@@ -50,10 +50,10 @@ public class Commands<S> extends CommandDispatcher<S> {
                 .then(literal("disable")
                         .executes(ctx -> {
                             MutableComponent msg = SafeVoid.PREFIX.copy();
-                            if (!Config.get().options.enabled) {
+                            if (!Config.options().enabled) {
                                 msg.append("Already disabled");
                             } else {
-                                Config.get().options.enabled = false;
+                                Config.options().enabled = false;
                                 Config.save();
                                 msg.append("Disabled");
                             }

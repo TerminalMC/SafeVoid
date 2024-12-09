@@ -35,7 +35,7 @@ public class MixinLivingEntity {
         // Don't complain unless you can demonstrate a fix for the
         // `defineSynchedData` dummy override error.
         Entity entity = ((Entity)(Object)this);
-        Config.Options options = Config.get().options;
+        Config.Options options = Config.options();
         if (options.enabled && (!options.playersOnly || entity instanceof Player)
                 && options.wrapMax && entity.getY() > options.maxHeight) {
             Vec3 delta = entity.getDeltaMovement();
@@ -52,7 +52,7 @@ public class MixinLivingEntity {
     @WrapMethod(method = "onBelowWorld")
     private void onVoidTick(Operation<Void> original) {
         Entity entity = ((Entity)(Object)this);
-        Config.Options options = Config.get().options;
+        Config.Options options = Config.options();
         if (options.enabled && (!options.playersOnly || entity instanceof Player)) {
             if (options.wrapMin && entity.getY() < options.minHeight) {
                 Vec3 delta = entity.getDeltaMovement();
